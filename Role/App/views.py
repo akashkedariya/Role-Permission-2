@@ -89,7 +89,7 @@ def snippet_detail(request, pk=None):
                 return Response({'msg' : 'Not valid user'})
 
             result = CustomUser.objects.all()  
-            
+
             data = [{'first_name': i.first_name, 'role':i.role, 'email' : i.email } for i in result]
 
             print('===This is a new person ===',data)
@@ -168,3 +168,6 @@ class EmployeeList(generics.ListAPIView):
 #     # search_fields = ['name', 'description','project_manager__user__f_name']      # 'project_manager__-->user__-->f_name' (ForeignKey)
 #     filterset_fields = ['description','name']                                           # Whole description   
 #     ordering_fields = ['name']        
+
+
+print('addddddddd')
