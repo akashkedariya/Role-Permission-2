@@ -107,6 +107,10 @@ def snippet_detail(request, pk=None):
         return Response(data)
 
 
+
+
+
+
 #======OR===============================================
 
 # @api_view(['GET', 'PUT', 'DELETE'])
