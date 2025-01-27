@@ -93,17 +93,16 @@ def snippet_detail(request, pk=None):
             data = [{'first_name': i.first_name, 'role':i.role, 'email' : i.email } for i in result]
 
             print('===This is a new person ===',data)
-            
+
             data  = {
                 'msg' : data
             }
 
         else:
-            
                data = {
-                   'msg' : 'Not access'
+                  'msg' : 'Not access'
                     } 
-            
+             
         return Response(data)
 
 
@@ -173,5 +172,3 @@ class EmployeeList(generics.ListAPIView):
 #     filterset_fields = ['description','name']                                           # Whole description   
 #     ordering_fields = ['name']        
 
-
-print('addddddddd')
